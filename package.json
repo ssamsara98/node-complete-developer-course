@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/samara98/node-complete-developer-course/issues"
   },
-  "homepage": "https://github.com/samara98/node-complete-developer-course#readme"
+  "homepage": "https://github.com/samara98/node-complete-developer-course#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongodb": "3.1.10"
+  }
 }
