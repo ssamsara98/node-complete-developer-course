@@ -3,7 +3,7 @@ const mongodb = require("mongodb");
 
 // CRUD create read update delete
 
-const { MongoClient } = mongodb;
+const { MongoClient, ObjectID } = mongodb;
 
 // Connection URL
 const user = encodeURIComponent(process.env.MONGODB_USER);
@@ -11,6 +11,10 @@ const password = encodeURIComponent(process.env.MONGODB_PASSWORD);
 const authMechanism = "DEFAULT";
 const connectionURL = `mongodb://${user}:${password}@localhost:27017/?authMechanism=${authMechanism}`;
 const databaseName = "task-manager";
+
+const id = new ObjectID();
+console.log(id.id.length);
+console.log(id.toHexString().length);
 
 MongoClient.connect(
   connectionURL,
@@ -54,27 +58,27 @@ MongoClient.connect(
     //   }
     // );
 
-    db.collection("tasks").insertMany(
-      [
-        {
-          description: "Clean the house",
-          completed: true,
-        },
-        {
-          description: "Renew inspection",
-          completed: false,
-        },
-        {
-          description: "Pot plants",
-          completed: false,
-        },
-      ],
-      (error, result) => {
-        if (error) {
-          return console.log("Unable to insert tasks!");
-        }
-        console.log(result.ops);
-      }
-    );
+    // db.collection("tasks").insertMany(
+    //   [
+    //     {
+    //       description: "Clean the house",
+    //       completed: true,
+    //     },
+    //     {
+    //       description: "Renew inspection",
+    //       completed: false,
+    //     },
+    //     {
+    //       description: "Pot plants",
+    //       completed: false,
+    //     },
+    //   ],
+    //   (error, result) => {
+    //     if (error) {
+    //       return console.log("Unable to insert tasks!");
+    //     }
+    //     console.log(result.ops);
+    //   }
+    // );
   }
 );
