@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/samara98/node-complete-developer-course#readme",
   "dependencies": {
-    "express": "4.16.4"
+    "express": "4.16.4",
+    "hbs": "4.0.1"
   }
 }
