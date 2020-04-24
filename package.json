@@ -19,6 +19,7 @@
   "homepage": "https://github.com/samara98/node-complete-developer-course#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "express": "4.16.4",
     "mongodb": "3.1.10",
     "mongoose": "5.3.16",
     "validator": "^13.0.0"
