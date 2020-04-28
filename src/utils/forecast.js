@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
   //   longitude;
 
   const url =
-    "http://api.weatherstack.com/current?access_key=17522fcc4e88343d792ab6a5a3ad7e01&query=" +
+    `http://api.weatherstack.com/current?access_key=${process.env.WEATHERSTACK_KEY}&query=` +
     latitude +
     "," +
     longitude +
