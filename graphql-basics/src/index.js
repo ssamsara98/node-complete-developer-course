@@ -1,5 +1,13 @@
 import { GraphQLServer } from 'graphql-yoga';
 
+//
+// Part I
+//
+// 1. Set up a "Comment" type with id and text fields. Both non-nullable.
+// 2. Set up a "comments" array with 4 comments
+// 3. Set up a "comments" query with a resolver that returns all the comments
+// 4. Run an query to get all 4 comments with both id and text fields
+
 // Scalar types - String, Boolean, Int, Float, ID
 
 // Demo user data
@@ -46,11 +54,31 @@ const posts = [
   },
 ];
 
+const comments = [
+  {
+    id: '102',
+    text: 'This worked well for me. Thanks!',
+  },
+  {
+    id: '103',
+    text: 'Glad you enjoyed it.',
+  },
+  {
+    id: '104',
+    text: 'This did no work.',
+  },
+  {
+    id: '105',
+    text: 'Nevermind. I got it to work.',
+  },
+];
+
 // Type definitions (schema)
 const typeDefs = `
   type Query {
     users(query: String): [User!]!
     posts(query: String): [Post!]!
+    comments: [Comment!]!
     me: User!
     post: Post!
   }
@@ -69,6 +97,11 @@ const typeDefs = `
     body: String!
     published: Boolean!
     author: User!
+  }
+
+  type Comment {
+    id: ID!
+    text: String!
   }
 `;
 
@@ -94,6 +127,9 @@ const resolvers = {
         const isBodyMatch = post.body.toLowerCase().includes(args.query.toLowerCase());
         return isTitleMatch || isBodyMatch;
       });
+    },
+    comments(parent, args, ctx, info) {
+      return comments;
     },
     me() {
       return {
