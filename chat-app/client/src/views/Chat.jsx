@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import io from 'socket.io-client';
 import moment from 'moment';
 
-import '../styles/chat.css';
+import '~/styles/chat.css';
 import SidebarTemplate from '~/components/SidebarTemplate';
 import MessageTemplate from '~/components/MessageTemplate';
 import LocationMessageTemplate from '~/components/LocationMessageTemplate';

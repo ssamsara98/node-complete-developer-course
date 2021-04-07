@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import '../styles/index.css';
+import '~/styles/index.css';
 
-const Index = (props) => {
+const Index = () => {
   const history = useHistory();
   const [query, setQuery] = React.useState({ username: '', room: '' });
 

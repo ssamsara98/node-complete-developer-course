@@ -13,8 +13,7 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server:debug\" \"npm run client\"",
     "prod": "cross-env NODE_ENV=production npm run start",
-    "build": "npm run build --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn install --prefix client && yarn build"
+    "heroku-postbuild": "cd client && NPM_CONFIG_PRODUCTION=false yarn install && yarn build"
   },
   "dependencies": {
     "bad-words": "^3.0.4",
