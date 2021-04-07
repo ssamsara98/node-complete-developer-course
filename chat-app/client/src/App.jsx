@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Index from './views/Index';
-import Chat from './views/Chat';
-import NotFoundPage from './views/404';
+import Index from '~/views/Index';
+import Chat from '~/views/Chat';
+import NotFoundPage from '~/views/404';
 
 function App() {
   return (
