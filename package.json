@@ -1,0 +1,22 @@
+{
+  "name": "node-complete-developer-course",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "homepage": "https://github.com/samara98/node-complete-developer-course#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samara98/node-complete-developer-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samara98/node-complete-developer-course/issues"
+  },
+  "lint-staged": {
+    "*.{md,html,css,scss,json,js,jsx,ts,tsx,vue}": "prettier -w"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "notes-app"
+    },
+    {
+      "path": "weather-app"
+    },
+    {
+      "path": "web-server"
+    },
+    {
+      "path": "task-manager"
+    },
+    {
+      "path": "chat-app"
+    }
+  ]
+}

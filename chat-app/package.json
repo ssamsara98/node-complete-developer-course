@@ -1,0 +1,20 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Chat Application",
+  "author": "Sulthon Abdul Malik",
+  "license": "UNLICENSED",
+  "main": "src/",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "dependencies": {
+    "bad-words": "^3.0.3",
+    "express": "^4.16.4",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

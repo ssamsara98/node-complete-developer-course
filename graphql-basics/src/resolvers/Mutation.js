@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/dist/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 const Mutation = {
   createUser(parent, args, { db }, info) {

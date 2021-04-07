@@ -1,0 +1,34 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Task Manager",
+  "author": "Sulthon Abdul Malik",
+  "license": "UNLICENSED",
+  "main": "src/",
+  "scripts": {
+    "start": "node .",
+    "dev": "env-cmd -f ./config/dev.env nodemon .",
+    "test": "env-cmd -f ./config/test.env jest --watch"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.0.1",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.5",
+    "multer": "^1.4.2",
+    "sharp": "^0.25.2",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "^25.4.0",
+    "nodemon": "^2.0.7",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
