@@ -1,14 +1,13 @@
 const express = require('express');
 
-const usersRouter = require('./routes/users-router');
+const adminRouter = require('./routes/admin-router');
+const authRouter = require('./routes/auth-router');
+const shopRouter = require('./routes/shop-router');
 
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', async (req, res, next) => {
-  return res.render('index', { title: 'Express' });
-});
-
-router.use('/users', usersRouter);
+router.use('/admin', adminRouter);
+router.use(shopRouter);
+router.use(authRouter);
 
 module.exports = router;

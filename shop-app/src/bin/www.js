@@ -14,6 +14,7 @@ if ((process.env.NODE_ENV = 'development')) {
 const app = require('../app');
 const debug = require('debug')('shop-app:server');
 const http = require('http');
+const mongoose = require('mongoose');
 
 /**
  * Get port from environment and store in Express.
@@ -25,6 +26,21 @@ app.set('port', port);
  * Create HTTP server.
  */
 const server = http.createServer(app);
+
+(async (msg) => {
+  console.log(msg);
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('MongoDB connected');
+  } catch (err) {
+    console.error(err);
+  }
+})('Connecting to MongoDB');
 
 /**
  * Listen on provided port, on all network interfaces.
