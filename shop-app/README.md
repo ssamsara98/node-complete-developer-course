@@ -1,0 +1,27 @@
+Shop Application
+
+- admin
+  - /admin
+    - /add-products [get] [post]
+    - /products [get]
+    - /products/:productId [delete]
+    - /edit-product [post]
+    - /edit-product/:productId [get]
+- auth
+  - /login [get] [post]
+  - /signup [get] [post]
+  - /logout [post]
+  - /reset [get] [post]
+  - /reset/:token [get]
+  - /new-password [post]
+- shop
+  - / [get]
+  - /products [get]
+  - /products/:productId [get]
+  - /cart [get] [post]
+  - /cart-delete-item [post]
+  - /checkout [get]
+  - /checkout/success [get]
+  - /checkout/cancel [get]
+  - /order [get]
+  - /orders/:orderId [get]
